@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/register.css">
+  <title>Create your VKU Mail Account</title>
+</head>
+<body>
+<div class="main">
+
+  <form action="/register" method="POST" class="form" id="form-1">
+<!--    <img src="logo.png" id="heading_logo" alt="">-->
+    <div class="background-container">
+
+    </div>
+    <p class="desc">Create your VKU Mail Account</p>
+
+    <div class="spacer"></div>
+
+    <div class="form-group">
+      <label for="fullname" class="form-label">Your name</label>
+      <input id="fullname" name="name" type="text" placeholder="Name" class="form-control">
+      <span class="form-message"></span>
+    </div>
+    <div class="form-group">
+      <label for="phone" class="form-label">Your Number Phone</label>
+      <input id="phone" name="phone" type="text" placeholder="Number Phone" class="form-control">
+      <span class="form-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" name="email" type="email" placeholder="VD: email@gmail.vn" class="form-control">
+      <span class="form-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="form-label">Password</label>
+      <input id="password" name="password" type="password" placeholder="Password" class="form-control">
+      <span class="form-message"></span>
+
+    </div>
+
+    <div class="form-group ">
+      <label for="password_confirmation" class="form-label">Confirm Password</label>
+      <input id="password_confirmation" name="password_confirm" placeholder="Confirm Password" type="password" class="form-control">
+      <span class="form-message"></span>
+    </div>
+
+    <div th:if="${ErrorMsg != null}" th:text="${ErrorMsg}" class="form-group" style="font-size: 15px;background-color:#d04646;color: #efefef;height: 25px;">
+
+    </div>
+
+    <div th:if="${SuccessMsg!=null}" th:text="${SuccessMsg}" class="form-group" style="font-size: 15px;background-color:#4c9a45;color: #efefef;height: 25px;">
+
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="form-submit">Register</button>
+    </div>
+
+    <div  class="form-group">
+      <p style="font-weight: bolder; color: #8d8b8b;">Have an already account ?
+        <a  style="text-decoration: underline; color: #000" href="/signin">Login here</a>
+      </p>
+
+    </div>
+  </form>
+</div>
+</body>
+</html>
