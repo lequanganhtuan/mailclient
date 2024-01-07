@@ -39,7 +39,7 @@ function checkEmailError (input){
     input.value = input.value.trim();
     let isEmail = false;
     if(regexEmail.test(input.value)){
-         showSuccess(input);
+        showSuccess(input);
     }
     else {
         isEmail = true;

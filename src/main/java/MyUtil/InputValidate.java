@@ -17,8 +17,8 @@ public class InputValidate {
         else if(rr.getEmail().equals("")){
             return "Your email is empty";
         }
-        else if(!rr.getEmail().split("@")[1].contains("tdtu.vn")){
-            return "Domain Email must be tdtu.vn";
+        else if(!rr.getEmail().split("@")[1].contains("vku.udn.vn")){
+            return "Domain Email must be vku.udn.vn";
         }
         else if(rr.getPassword().equals("")){
             return "Your password is empty";
