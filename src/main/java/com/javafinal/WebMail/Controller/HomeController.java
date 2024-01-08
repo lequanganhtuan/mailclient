@@ -119,8 +119,8 @@ public class HomeController {
             model.addAttribute("ErrorMsg","Your email is empty");
             url = "/LoginAndRegister/Login";
         }
-        else if(!LR.getEmail().split("@")[1].contains("tdtu.vn")){
-            model.addAttribute("ErrorMsg","Domain Email must be tdtu.vn");
+        else if(!LR.getEmail().split("@")[1].contains("vku.vn")){
+            model.addAttribute("ErrorMsg","Domain Email must be vku.vn");
             url = "/LoginAndRegister/Login";
         }
         else if(LR.getPassword().equals("")){

@@ -39,7 +39,7 @@
 
       body {
         font-family: "Poppins";
-        background: white;
+        background: #f1f1f1;
         height: 100vh;
         overflow: hidden;
         display: flex;
@@ -50,11 +50,11 @@
       .container {
         background: white;
         width: 500px;
-        border: none;
         border-radius: 8px;
         padding: 30px;
         border: 1px solid rgba(0, 0, 0, 0.3);
         height: 550px;
+        box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
       }
 
       .form-control {
@@ -125,6 +125,7 @@
         border-radius : 999px;
         margin-bottom : 60px;
         cursor : pointer;
+        box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
       }
       .signup-link{
         display : flex;
@@ -156,6 +157,15 @@
         background: #0e85d5;
       }
 
+      .signup-link a {
+        color:#8d8b8b;
+      }
+
+      .signup-link a:hover {
+        color: #000000 ;
+      }
+
+
 
 
     </style>
@@ -183,8 +193,8 @@
             Login
         </button>
         <div class="signup-link">
-          <a href="/forgotPassword" style="text-decoration: none;color:#8d8b8b;">Forgot email?</a>
-          <a href="/register" style="text-decoration: none;color:#8d8b8b;">Create account</a>
+          <a href="/forgotPassword" style="text-decoration: none;">Forgot email?</a>
+          <a href="/register" style="text-decoration: none;">Create account</a>
         </div>
         <div th:if="${param.error}"  class="form-group" style="border-radius:10px;font-size: 15px;background-color:#d04646;color: #efefef;height: 30px;margin-top: 10px;text-align: center;">
           Invalid email and password
