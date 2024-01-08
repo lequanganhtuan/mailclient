@@ -2,19 +2,18 @@ package com.javafinal.WebMail.Controller;
 
 import com.javafinal.WebMail.Constant.Archive;
 import com.javafinal.WebMail.Model.Email;
-import com.javafinal.WebMail.Model.EmailRepository;
+import com.javafinal.WebMail.Repo.EmailRepository;
 
 import com.javafinal.WebMail.Model.Label;
 import com.javafinal.WebMail.Service.QueryService;
 import com.javafinal.WebMail.UserSessionInfo;
-import com.javafinal.WebMail.ViewModel.EmailBasic;
-import com.javafinal.WebMail.ViewModel.EmailInput;
+import com.javafinal.WebMail.Entity.EmailBasic;
+import com.javafinal.WebMail.Entity.EmailInput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;

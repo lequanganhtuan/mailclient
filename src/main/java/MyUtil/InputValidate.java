@@ -1,7 +1,7 @@
 package MyUtil;
 
 
-import com.javafinal.WebMail.ViewModel.RegisterRequest;
+import com.javafinal.WebMail.Entity.RegisterRequest;
 
 public class InputValidate {
     public static String validateRegisterInput(RegisterRequest rr){

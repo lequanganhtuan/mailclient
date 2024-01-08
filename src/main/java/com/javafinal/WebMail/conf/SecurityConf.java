@@ -42,7 +42,15 @@ public class SecurityConf extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/user/**").hasRole("USER").antMatchers("/**").permitAll().and().formLogin().loginPage("/signin").loginProcessingUrl("/login").defaultSuccessUrl("/user/").and().csrf().disable();
+        http.authorizeRequests()
+                .antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/user/**").hasRole("USER")
+                .antMatchers("/**").permitAll()
+                .and().formLogin()
+                    .loginPage("/signin")
+                    .loginProcessingUrl("/login")
+                    .defaultSuccessUrl("/user/")
+                .and().csrf().disable();
 
     }
 }

@@ -1,4 +1,4 @@
-package com.javafinal.WebMail.ViewModel;
+package com.javafinal.WebMail.Entity;
 
 
 import lombok.AllArgsConstructor;

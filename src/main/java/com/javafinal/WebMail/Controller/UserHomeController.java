@@ -2,13 +2,12 @@ package com.javafinal.WebMail.Controller;
 
 import com.javafinal.WebMail.Constant.Archive;
 import com.javafinal.WebMail.Model.Label;
-import com.javafinal.WebMail.Model.LabelRepository;
+import com.javafinal.WebMail.Repo.LabelRepository;
 import com.javafinal.WebMail.Model.User;
-import com.javafinal.WebMail.Model.UserRepository;
+import com.javafinal.WebMail.Repo.UserRepository;
 import com.javafinal.WebMail.Service.QueryService;
 import com.javafinal.WebMail.UserSessionInfo;
-import com.javafinal.WebMail.ViewModel.EmailBasic;
-import com.javafinal.WebMail.UserSessionInfo;
+import com.javafinal.WebMail.Entity.EmailBasic;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,7 +21,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.file.*;
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller

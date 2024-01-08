@@ -1,29 +1,62 @@
 package com.javafinal.WebMail.Controller;
 
 import MyUtil.InputValidate;
-import com.javafinal.WebMail.Constant.Role;
+import com.javafinal.WebMail.Repo.LabelRepository;
 import com.javafinal.WebMail.Model.User;
+import com.javafinal.WebMail.Repo.UserRepository;
+import com.javafinal.WebMail.Service.QueryService;
 import com.javafinal.WebMail.Service.UserService;
-import com.javafinal.WebMail.ViewModel.RegisterRequest;
+import com.javafinal.WebMail.Entity.RegisterRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 @Controller
 public class HomeController {
+
+    @Autowired
+    UserRepository repo;
+    @Autowired
+    QueryService queryService;
+    @Autowired
+    LabelRepository labelRepo;
     @Autowired
     private UserService userService;
+
+    private static final String MODEL_EMAILBASICLIST = "emailBasicList";
+    private static final String MODEL_LISTSIZE = "listSize";
+
+    private static final String MODEL_CURRENT_ARCHIVE = "archive";
+//    @GetMapping("/")
+//    public String index(){
+//        return "index";
+//    }
+
     @GetMapping("/")
-    public String index(){
-        return "index";
+    public String index(HttpServletRequest request) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null && auth.isAuthenticated() && !(auth instanceof AnonymousAuthenticationToken)) {
+            // Người dùng đã đăng nhập, chuyển hướng tới một đường dẫn khác
+            return "redirect:/user"; // Thay thế "/user" bằng đường dẫn mong muốn
+        } else {
+            // Người dùng chưa đăng nhập hoặc là khách, hiển thị trang mặc định
+            return "index";
+        }
     }
+
+
+
 
     @GetMapping("/email_list")
     public String index(HttpServletResponse response){

@@ -1,5 +1,6 @@
-package com.javafinal.WebMail.Model;
+package com.javafinal.WebMail.Repo;
 
+import com.javafinal.WebMail.Model.ChatFlow;
 import org.springframework.data.repository.CrudRepository;
 
 

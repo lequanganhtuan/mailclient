@@ -1,11 +1,14 @@
 package com.javafinal.WebMail.Service;
 
 import com.javafinal.WebMail.Constant.Archive;
-import com.javafinal.WebMail.Constant.Role;
 import com.javafinal.WebMail.Model.*;
+import com.javafinal.WebMail.Repo.ChatFlowRepository;
+import com.javafinal.WebMail.Repo.EmailRepository;
+import com.javafinal.WebMail.Repo.LabelRepository;
+import com.javafinal.WebMail.Repo.UserRepository;
 import com.javafinal.WebMail.UserSessionInfo;
-import com.javafinal.WebMail.ViewModel.EmailBasic;
-import com.javafinal.WebMail.ViewModel.EmailInput;
+import com.javafinal.WebMail.Entity.EmailBasic;
+import com.javafinal.WebMail.Entity.EmailInput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

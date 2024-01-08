@@ -1,7 +1,7 @@
 package com.javafinal.WebMail.conf;
 
 import com.javafinal.WebMail.Model.User;
-import com.javafinal.WebMail.Model.UserRepository;
+import com.javafinal.WebMail.Repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

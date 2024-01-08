@@ -2,7 +2,7 @@ package com.javafinal.WebMail.Controller;
 
 
 import com.javafinal.WebMail.Model.User;
-import com.javafinal.WebMail.Model.UserRepository;
+import com.javafinal.WebMail.Repo.UserRepository;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

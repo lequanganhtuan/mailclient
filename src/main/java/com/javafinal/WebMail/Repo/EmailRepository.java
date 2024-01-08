@@ -1,5 +1,7 @@
-package com.javafinal.WebMail.Model;
+package com.javafinal.WebMail.Repo;
 
+import com.javafinal.WebMail.Model.Email;
+import com.javafinal.WebMail.Model.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
